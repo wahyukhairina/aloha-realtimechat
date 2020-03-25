@@ -94,7 +94,7 @@ export default class RegisterScreen extends React.Component {
           db.ref('/user/' + userCredentials.user.uid)
             .set({
               name: this.state.name,
-              status: 'Online',
+              status: 'online',
               email: this.state.email,
               photo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/User_font_awesome.svg",
               uid : userCredentials.user.uid,
