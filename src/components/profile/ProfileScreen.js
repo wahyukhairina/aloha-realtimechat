@@ -6,11 +6,13 @@ import {
   TouchableOpacity,
   Image,
   Alert,
+  ImageBackground
 } from 'react-native';
 import styles from '../constants/styles';
 import {auth, db} from '../congfig/Config';
 import ImagePicker from 'react-native-image-picker';
 import firebase from 'firebase';
+import backGround from '../../image/bgchat.png';
 
 export default class ProfilScreen extends Component {
   static navigationOptions = {
@@ -18,12 +20,21 @@ export default class ProfilScreen extends Component {
   };
 
   state = {
-    imageSource: require('../../image/settings.png'),
+    imageSource: '',
     upload: false,
+    users: [],
   };
+
+  componentDidMount() {
+    this.getDataUser();
+  }
+
   onLogout = async () => {
-      const id = auth.currentUser.uid
-      await db.ref('/user/' + id ).child("status").set('offline')
+    const id = auth.currentUser.uid;
+    await db
+      .ref('/user/' + id)
+      .child('status')
+      .set('offline');
     auth.signOut().then(res => console.warn('oke'));
   };
 
@@ -55,13 +66,16 @@ export default class ProfilScreen extends Component {
     });
   };
 
-  updateUserImage = async (imageUrl) => {
-    const id = auth.currentUser.uid
-      auth.currentUser.photo = imageUrl
-    await  db.ref('/user/' + id ).child('photo').set(imageUrl)
-      Alert.alert('Succes', 'image changed successfull')
-      this.setState({ upload: false, imageSource: { uri: imageUrl}})
-  }
+  updateUserImage = async imageUrl => {
+    const id = auth.currentUser.uid;
+    auth.currentUser.photo = imageUrl;
+    await db
+      .ref('/user/' + id)
+      .child('photo')
+      .set(imageUrl);
+    Alert.alert('Succes', 'image changed successfull');
+    this.setState({upload: false, imageSource: {uri: imageUrl}});
+  };
 
   uploadFile = async () => {
     const file = await this.uriToBlob(this.state.imageSource.uri);
@@ -74,7 +88,7 @@ export default class ProfilScreen extends Component {
       .catch(error => {
         this.setState({
           upload: false,
-          imageSource: require('../../image/settings.png'),
+          imageSource: require('../../image/user.png'),
         });
         Alert.alert('Error', 'Error on upload Image');
       });
@@ -97,24 +111,43 @@ export default class ProfilScreen extends Component {
     });
   };
 
+  getDataUser() {
+    const id = auth.currentUser.uid;
+    db.ref('/user/' + id).on('value', snapshot => {
+      const data = snapshot.val();
+      this.setState({
+        users: data,
+      });
+    });
+  }
+
   render() {
+    console.log('user', this.state.users)
     return (
       <>
+      <ImageBackground
+          source={backGround}
+          style={{
+            flex: 1,
+            width: null,
+            height: null,
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
         <View style={{marginVertical: 200, alignItems: 'center'}}>
-          <Text>Ini foto</Text>
           <TouchableOpacity onPress={this.changeImage}>
             {this.state.upload ? (
               <ActivityIndicator size="large" />
             ) : (
               <Image
                 style={{
-                  width: 100,
-                  height: 100,
+                  width: 150,
+                  height: 150,
                   borderRadius: 100,
                   resizeMode: 'cover',
                   marginBottom: 10,
                 }}
-                source={this.state.imageSource}
+                source={this.state.imageSource === '' ? {uri: `${this.state.users.photo}`} : this.state.imageSource}
               />
             )}
           </TouchableOpacity>
@@ -123,6 +156,7 @@ export default class ProfilScreen extends Component {
             <Text>Logout</Text>
           </TouchableOpacity>
         </View>
+        </ImageBackground>
       </>
     );
   }

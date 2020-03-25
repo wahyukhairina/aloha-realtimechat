@@ -170,27 +170,15 @@ export default class ChatScreen extends Component {
             width: null,
             height: null,
           }}>
-        {/* <KeyboardAvoidingView behavior="height" style={{flex: 1}}>
+          <KeyboardAvoidingView behavior="height" style={{flex: 1}}>
             <Animated.View
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                padding: 5,
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                Index: 2,
-                height: 60,
-                bottom: this.keyboardHeight,
-              }}>
+              style={[styles.bottomBar, {bottom: this.keyboardHeight}]}>
               <TextInput
-                ref={ref => this.FlatList}
                 style={styles.inputmessage}
                 value={this.state.textMessage}
-                placeholder="Type message..."
+                placeholder="Type message"
                 onChangeText={this.handleChange('textMessage')}
               />
-
               <TouchableOpacity
                 onPress={this.sendMessage}
                 style={styles.btnSend}>
@@ -201,49 +189,22 @@ export default class ChatScreen extends Component {
                 />
               </TouchableOpacity>
             </Animated.View>
-            
-                <FlatList
-                  style={{padding: 10, height: height * 0.8}}
-                  data={this.state.messageList}
-                  renderItem={this.renderRow}
-                  keyExtractor={(item, index) => index.toString()}
-                />
-              
-          </KeyboardAvoidingView> */}
-        <KeyboardAvoidingView behavior="height" style={{flex: 1}}>
-          <Animated.View
-            style={[styles.bottomBar, {bottom: this.keyboardHeight}]}>
-            <TextInput
-              style={styles.inputmessage}
-              value={this.state.textMessage}
-              placeholder="Type message"
-              onChangeText={this.handleChange('textMessage')}
+            <FlatList
+              ref={ref => (this.flatList = ref)}
+              onContentSizeChange={() =>
+                this.flatList.scrollToEnd({animated: true})
+              }
+              onLayout={() => this.flatList.scrollToEnd({animated: true})}
+              style={{padding: 10, height: height * 0.8}}
+              data={this.state.messageList}
+              renderItem={this.renderRow}
+              keyExtractor={(item, index) => index.toString()}
+              ListFooterComponent={
+                <Animated.View style={{height: this.bottomPadding}} />
+              }
             />
-            <TouchableOpacity onPress={this.sendMessage} style={styles.btnSend}>
-              <Icon
-                name="send"
-                size={20}
-                style={{color: 'white', marginRight: 10, marginBottom: 15}}
-              />
-            </TouchableOpacity>
-          </Animated.View>
-          <FlatList
-            ref={ref => (this.flatList = ref)}
-            onContentSizeChange={() =>
-              this.flatList.scrollToEnd({animated: true})
-            }
-            onLayout={() => this.flatList.scrollToEnd({animated: true})}
-            style={{padding: 10, height: height * 0.8}}
-            data={this.state.messageList}
-            renderItem={this.renderRow}
-            keyExtractor={(item, index) => index.toString()}
-            ListFooterComponent={
-              <Animated.View style={{height: this.bottomPadding}} />
-            }
-          />
-             
-        </KeyboardAvoidingView>
-     </ImageBackground>
+          </KeyboardAvoidingView>
+        </ImageBackground>
       </>
     );
   }

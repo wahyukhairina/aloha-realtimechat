@@ -9,15 +9,17 @@ import AuthLoadingScreen from './src/components/auth/AuthLoadingScreen'
 import RegisterScreen from './src/components/register/Register'
 import ChatScreen from './src/components/chat/Chat'
 import ProfileScreen from './src/components/profile/ProfileScreen'
-import Icon from 'react-native-vector-icons/AntDesign'
+import Icon from 'react-native-vector-icons/Feather'
 import FriendProfile from './src/components/profile/FriendProfile'
 import Maps from './src/components/maps/maps'
+import FriendMap from './src/components/maps/friendMap'
 
 const AppStack = createStackNavigator({ 
   Home: HomeScreen,
   Chat: ChatScreen,
   Profile : ProfileScreen,
-  Friend: FriendProfile
+  Friend: FriendProfile,
+  FriendMap: FriendMap
 });
  
 AppStack.navigationOptions = ({navigation}) => {
@@ -33,18 +35,20 @@ const AuthStack = createStackNavigator({
   });
 
   const TabNavigator = createBottomTabNavigator({
-    Home: AppStack,
+    Chats: AppStack,
     Profile: ProfileScreen,
-    Map : Maps
+    Friends : Maps
   },{
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let iconName;
         if (routeName === 'Home') {
-          iconName = 'wechat'
+          iconName = 'mail'
         } else if (routeName === 'Profile') {
-          iconName = 'user';
+          iconName = 'settings';
+        } else {
+          iconName= 'map-pin'
         }
         return <Icon name={iconName} size={25} color={tintColor} />;
       },

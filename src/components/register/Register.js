@@ -96,7 +96,7 @@ export default class RegisterScreen extends React.Component {
               name: this.state.name,
               status: 'online',
               email: this.state.email,
-              photo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/User_font_awesome.svg",
+              photo: "https://cdn2.iconfinder.com/data/icons/men-women-from-all-over-the-world-1/93/man-woman-people-person-avatar-face-user_49-512.png",
               uid : userCredentials.user.uid,
               longitude : this.state.location.longitude,
               latitude : this.state.location.latitude,

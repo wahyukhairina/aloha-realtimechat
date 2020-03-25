@@ -11,7 +11,8 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   ToastAndroid,
-  ImageBackground
+  ImageBackground,
+  Alert
 } from 'react-native';
 import { auth } from "../congfig/Config"
 import backGround from '../../image/bg.png'
@@ -69,7 +70,8 @@ export default class LoginScreen extends React.Component {
         .then(async data => {
             console.log(data)
         })
-        .catch(error => console.log(error.message))
+        .catch(error => 
+          ToastAndroid.show(error.message, ToastAndroid.LONG))
     }  
   };
 
