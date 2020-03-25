@@ -22,6 +22,8 @@ export default class ProfilScreen extends Component {
     upload: false,
   };
   onLogout = async () => {
+      const id = auth.currentUser.uid
+      await db.ref('/user/' + id ).child("status").set('offline')
     auth.signOut().then(res => console.warn('oke'));
   };
 

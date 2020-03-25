@@ -34,6 +34,7 @@ class HomeScreen extends Component {
                 timeout: 15000,
             })
            .then(location => {
+            db.ref('/user/' + id ).child("status").set('online')
             db.ref('/user/' + id ).child("latitude").set(location.latitude)
             db.ref('/user/' + id ).child("longitude").set(location.longitude)
                 
