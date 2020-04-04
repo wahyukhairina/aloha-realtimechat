@@ -27,7 +27,7 @@ export default class Maps extends Component {
             longitude: item.longitude,
         }}
         title={item.name}
-        description="Hello" />
+        description={item.status} />
         ) 
         return (
             <>

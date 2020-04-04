@@ -184,8 +184,9 @@ const styles = StyleSheet.create({
   },
   inputTitle: {
     color: '#8A8F9E',
-    fontSize: 10,
+    fontSize: 12,
     textTransform: 'uppercase',
+    fontWeight:'bold'
   },
   input: {
     borderBottomColor: '#8A8F9E',

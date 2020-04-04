@@ -19,7 +19,7 @@ const AppStack = createStackNavigator({
   Chat: ChatScreen,
   Profile : ProfileScreen,
   Friend: FriendProfile,
-  FriendMap: FriendMap
+  FriendMap: FriendMap,
 });
  
 AppStack.navigationOptions = ({navigation}) => {
@@ -31,7 +31,7 @@ AppStack.navigationOptions = ({navigation}) => {
 
 const AuthStack = createStackNavigator({ 
   Login: LoginScreen,
-  Register: RegisterScreen,
+  Register: RegisterScreen
   });
 
   const TabNavigator = createBottomTabNavigator({

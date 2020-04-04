@@ -6,7 +6,7 @@ import {
   Dimensions,
   FlatList,
   ImageBackground,
-  Image
+  Image,
 } from 'react-native';
 import {Container} from 'native-base';
 import {db, auth} from '../congfig/Config';
@@ -22,26 +22,20 @@ class HomeScreen extends Component {
 
   state = {
     users: [],
-    latitude: '',
-    longtitude: '',
   };
 
   componentDidMount() {
-    const id = auth.currentUser.uid;
     this.getDataUser();
     this.getLocation();
   }
 
-  getLocation() {
+  async getLocation () {
     const id = auth.currentUser.uid;
-    GetLocation.getCurrentPosition({
+    await GetLocation.getCurrentPosition({
       enableHighAccuracy: true,
       timeout: 15000,
     })
       .then(location => {
-        db.ref('/user/' + id)
-          .child('status')
-          .set('online');
         db.ref('/user/' + id)
           .child('latitude')
           .set(location.latitude);
@@ -49,6 +43,12 @@ class HomeScreen extends Component {
           .child('longitude')
           .set(location.longitude);
       })
+      .then(
+        db
+          .ref('/user/' + id)
+          .child('status')
+          .set('online'),
+      )
       .catch(error => {
         const {code, message} = error;
         console.warn(code, message);
@@ -76,12 +76,17 @@ class HomeScreen extends Component {
           padding: 10,
           borderBottomColor: '#ccc',
           borderBottomWidth: 1,
-          backgroundColor: 'rgba(255, 255, 255, 0)',
-          flexDirection:'row',
-          alignItems:'center'
+          flexDirection: 'row',
+          alignItems: 'center',
         }}>
-          <Image style={{borderRadius:100, width: 50, height: 50, marginRight:5}} source={{uri: `${item.photo}`}} />
-                   <Text style={{fontSize: 16}}>{item.name}</Text>
+        <Image
+          style={{borderRadius: 100, width: 50, height: 50, marginRight: 5}}
+          source={{uri: `${item.photo}`}}
+        /><View>
+          <Text style={{fontSize: 16}}>{item.name}</Text>
+          <Text style={{fontSize: 12}}>{item.status}</Text>
+        </View>
+        
       </TouchableOpacity>
     );
   };

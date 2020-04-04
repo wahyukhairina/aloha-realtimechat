@@ -9,6 +9,7 @@ import {
   ImageBackground,
   Animated,
   Platform,
+  Alert,
   Keyboard,
 } from 'react-native';
 import styles from '../constants/styles';
@@ -116,6 +117,11 @@ export default class ChatScreen extends Component {
     this.setState({[key]: val});
   };
 
+  LongPress(item){
+    console.log(item)
+    Alert.alert('confirmation', 'Delete Message?')
+  }
+
   convertTime = time => {
     let d = new Date(time);
     let c = new Date();
@@ -130,6 +136,7 @@ export default class ChatScreen extends Component {
   renderRow = ({item}) => {
     console.disableYellowBox = true;
     return (
+      <TouchableOpacity onLongPress={()=> this.LongPress(item)}>
       <View
         style={{
           flexDirection: 'row',
@@ -156,11 +163,13 @@ export default class ChatScreen extends Component {
           {this.convertTime(item.time)}
         </Text>
       </View>
+      </TouchableOpacity>
     );
   };
 
   render() {
     let {height} = Dimensions.get('window');
+    console.log(this.state.messageList)
     return (
       <>
         <ImageBackground

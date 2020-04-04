@@ -151,9 +151,9 @@ export default class ProfilScreen extends Component {
               />
             )}
           </TouchableOpacity>
-          <Text>{auth.currentUser.displayName}</Text>
-          <TouchableOpacity onPress={this.onLogout}>
-            <Text>Logout</Text>
+          <Text style={{fontSize: 22}}>{auth.currentUser.displayName}</Text>
+          <TouchableOpacity style={{marginTop:30, backgroundColor:'#eff0f2', width: 90, height: 30, justifyContent:'center', alignItems:'center', borderRadius:10}} onPress={this.onLogout}>
+            <Text style={{ fontSize:18}}>Logout</Text>
           </TouchableOpacity>
         </View>
         </ImageBackground>
