@@ -1,7 +1,7 @@
 <h1 align='center'>GeoChat <br>Maps & Chat Application</h1>
 
 <p align='center'>
-    <img width="400" src='./screenshoot/welcome.png' />
+    <img width="400" src='./rdm/login.png' />
 </p>
 
 <br>
@@ -36,24 +36,9 @@ You can Download the APK [`here`](https://drive.google.com/file/d/1xHm8ESclw1v_U
 ## Screenshot from the App
 <p align='center'>
   <span>
-      <image width="200" src="./screenshoot/splash.png" />
-      <image width="200" src="./screenshoot/welcome.png" />
-      <image width="200" src="./screenshoot/login.png" />
-      <image width="200" src="./screenshoot/register.png" />
+      <image width="800" src="./rdm/ui_app.png" />
       
   </span>
 </p>
-<p align='center'>
-  <span>
-      <image width="200" src="./screenshoot/home.png" />
-      <image width="200" src="./screenshoot/friendlist.png" />
-      <image width="200" src="./screenshoot/chatroom.png" />
-      
-  </span>
-</p>
-<p align='center'>
-  <span>
-      <image width="200" src="./screenshoot/friend-profile.png" />
-      <image width="200" src="./screenshoot/user-profile.png" />      
-  </span>
-</p>
+
+
