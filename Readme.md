@@ -1,5 +1,5 @@
 <h1 align='center'>Aloha! <br>Chat & Maps Application</h1>
-![aloha](./rdm/aloha.GIF)
+![aloha (2)](https://user-images.githubusercontent.com/61218212/78534524-c18ace80-7814-11ea-8f00-95e9049585ba.gif)
 
 <p align='center'>
     <img width="200" src='./rdm/login.png' />
