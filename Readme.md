@@ -1,7 +1,7 @@
 <h1 align='center'>GeoChat <br>Maps & Chat Application</h1>
 
 <p align='center'>
-    <img width="400" src='./screenshoot/welcome.png' />
+    <img width="400" src='./screenshoot/login.png' />
 </p>
 
 <br>
