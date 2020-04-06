@@ -1,5 +1,5 @@
 <h1 align='center'>Aloha! <br>Chat & Maps Application</h1>
-![aloha](./rdm/aloha.gif)
+![aloha](./rdm/aloha.GIF)
 
 <p align='center'>
     <img width="200" src='./rdm/login.png' />
