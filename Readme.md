@@ -36,14 +36,9 @@ You can Download the APK [`here`](https://drive.google.com/file/d/1xHm8ESclw1v_U
 ## Screenshot from the App
 <p align='center'>
   <span>
-      <image width="500" src="./rdm/ui_app.png" />
+      <image width="800" src="./rdm/ui_app.png" />
       
   </span>
 </p>
 
-<p align='center'>
-  <span>
-      <image width="200" src="./screenshoot/friend-profile.png" />
-      <image width="200" src="./screenshoot/user-profile.png" />      
-  </span>
-</p>
+
