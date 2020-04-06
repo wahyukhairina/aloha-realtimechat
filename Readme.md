@@ -36,10 +36,7 @@ You can Download the APK [`here`](https://drive.google.com/file/d/1xHm8ESclw1v_U
 ## Screenshot from the App
 <p align='center'>
   <span>
-      <image width="200" src="./screenshoot/splash.png" />
-      <image width="200" src="./screenshoot/welcome.png" />
-      <image width="200" src="./screenshoot/login.png" />
-      <image width="200" src="./screenshoot/register.png" />
+      <image width="200" src="./rdm/ui_app.png" />
       
   </span>
 </p>
