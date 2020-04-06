@@ -1,7 +1,7 @@
 <h1 align='center'>Aloha! <br>Chat & Maps Application</h1>
 
 <p align='center'>
-    <img width="400" src='./rdm/login.png' />
+    <img width="300" src='./rdm/login.png' />
 </p>
 
 <br>
