@@ -21,7 +21,7 @@
 2. Node_modules ``` npm install ``` or ``` yarn install ```
 
 ## How to Install
-1. Download this Project or you can type ``` git clone https://github.com/mamenesia/GeoChat-RN.git ```
+1. Download this Project or you can type ``` git clone https://github.com/wahyukhairina/aloha-realtimechat/ ```
 2. Open app's directory in CMD or Terminal
 3. Type ` npm install ` or ` yarn install `
 4. Type ` react-native run-android `
