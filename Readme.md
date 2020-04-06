@@ -25,7 +25,7 @@
 2. Open app's directory in CMD or Terminal
 3. Type ` npm install ` or ` yarn install `
 4. Type ` react-native run-android `
-5. Registern your own account
+5. Register your own account
 6. Login to use :)
 <!-- 
 ## Preview Video 
