@@ -1,4 +1,4 @@
-<h1 align='center'>GeoChat <br>Maps & Chat Application</h1>
+<h1 align='center'>Aloha! <br>Chat & Maps Application</h1>
 
 <p align='center'>
     <img width="400" src='./rdm/login.png' />
@@ -14,7 +14,7 @@
 ![React Native Geolocation Service](https://img.shields.io/badge/react%20native%20geolocation%20service-v3.1.0-brightgreen)
 ![React Native Gifted Chat](https://img.shields.io/badge/react%20native%20gifted%20chat-v0.9.11-yellowgreen)
 
-<p align='justify'>GeoChat is an Chat Application with maps feature to track/show the user's friend location near to user's current location. GeoChat was built using React Native and Firebase real-time database.</p>
+<p align='justify'>Aloha is an Chat Application with maps feature to track/show the user's friend location. GeoChat was built using React Native and Firebase real-time database.</p>
 
 ## Requirements
 1. <a href="https://nodejs.org/en/download/">Node Js</a>
@@ -30,7 +30,7 @@
 You can watch the preview video [`here`](https://drive.google.com/file/d/100MX_fDn3zn_xsOpg109sTaguJ72sz25/view?usp=sharing) -->
 
 ## Download the APK
-You can Download the APK [`here`](https://drive.google.com/file/d/1xHm8ESclw1v_U4VKk5SywMRj6kRiCJw2/view?usp=sharing)
+You can Download the APK [`here`](bit.ly/aloha_app)
 
 
 ## Screenshot from the App
