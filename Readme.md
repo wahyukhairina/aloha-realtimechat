@@ -30,7 +30,7 @@
 You can watch the preview video [`here`](https://drive.google.com/file/d/100MX_fDn3zn_xsOpg109sTaguJ72sz25/view?usp=sharing) -->
 
 ## Download the APK
-You can Download the APK [`here`](bit.ly/aloha_app)
+You can Download the APK [`here`](https://drive.google.com/drive/folders/1C_zNb5JL1PVRe7WzP_z9eSkZ-VKpb3xY)
 
 
 ## Screenshot from the App
