@@ -39,7 +39,7 @@ You can Download the APK [`here`](https://drive.google.com/drive/folders/1C_zNb5
 <p align='center'>
   <span>
       <image width="900" src="./rdm/ui_app.png" />
-    <image width="200" src='./rdm/login.png' />
+    <image width="300" src='./rdm/login.png' />
       
   </span>
 </p>
