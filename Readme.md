@@ -1,6 +1,7 @@
 <h1 align='center'>Aloha! <br>Chat & Maps Application</h1>
 
 <p align='center'>
+    ![](aloha.gif)
     <img width="200" src='./rdm/login.png' />
 </p>
 
