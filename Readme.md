@@ -3,7 +3,7 @@
 
 <p align='center'>
     <img width="200" src='./rdm/login.png' />
-    <img width="200" src='https://user-images.githubusercontent.com/61218212/78534524-c18ace80-7814-11ea-8f00-95e9049585ba.gif' />
+    <img width="200" src='https://user-images.githubusercontent.com/61218212/78534878-5db4d580-7815-11ea-9eb7-5540dfa10c39.gif' />
 </p>
 
 <br>
