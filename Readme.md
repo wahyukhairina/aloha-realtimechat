@@ -2,8 +2,7 @@
 
 
 <p align='center'>
-    <img width="200" src='./rdm/login.png' />
-    <img width="200" src='https://user-images.githubusercontent.com/61218212/78534878-5db4d580-7815-11ea-9eb7-5540dfa10c39.gif' />
+    <img width="300" src='https://user-images.githubusercontent.com/61218212/78534878-5db4d580-7815-11ea-9eb7-5540dfa10c39.gif' />
 </p>
 
 <br>
@@ -39,6 +38,7 @@ You can Download the APK [`here`](https://drive.google.com/drive/folders/1C_zNb5
 <p align='center'>
   <span>
       <image width="800" src="./rdm/ui_app.png" />
+    <image width="200" src='./rdm/login.png' />
       
   </span>
 </p>
